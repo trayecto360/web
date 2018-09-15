@@ -1,0 +1,63 @@
+diff --git a/old/s-chat-support.js b/new/s-chat-support.js
+index 756684c..2fae1f4 100644
+--- a/old/s-chat-support.js
++++ b/new/s-chat-support.js
+@@ -65,10 +65,10 @@
+                 var submitInput = createDOMElem('textarea', 's-chat-submit-input');
+                 var poweredBy = createDOMElem('div', 's-chat-powered-by');
+                 var userAgentMatch = navigator.userAgent && navigator.userAgent.match(/iPhone|iPad|iPod/i);
+-                poweredBy.innerHTML = 'Powered by <a href="https://www.simplechat.support">www.SimpleChat.Support</a>';
++                poweredBy.innerHTML = 'Powered by <a href="https://simplechat.support">simplechat.support</a>';
+                 submitInput.rows = '1';
+                 submitInput.placeholder = (sChatSettings.labels && sChatSettings.labels.sendPlaceholder) || 'Send message...';
+-                boxHeader.innerHTML = '<div class="s-chat-header-title">' + ((sChatSettings.labels && sChatSettings.labels.headerTitle) || 'Simple Chat Support') + '</div>';
++                boxHeader.innerHTML = '<div class="s-chat-header-title"><span class="s-chat-presence-indicator"></span> ' + ((sChatSettings.labels && sChatSettings.labels.headerTitle) || 'Simple Chat Support') + '</div>';
+                 box.appendChild(boxHeader);
+                 box.appendChild(messagesList);
+                 box.appendChild(poweredBy);
+@@ -180,18 +180,41 @@
+                 }
+             };
+ 
++            var adminActive = function (data) {
++                if (data.fields.status.online) {
++                    document.getElementById('s-chat-box').classList.remove('s-chat-box-admin-is-offline');
++                    document.getElementById('s-chat-box').classList.add('s-chat-box-admin-is-online');
++                } else {
++                    document.getElementById('s-chat-box').classList.remove('s-chat-box-admin-is-online');
++                    document.getElementById('s-chat-box').classList.add('s-chat-box-admin-is-offline');
++                }
++            };
++
+             // ddp is connected callback
+             ddp.on('connected', function () {
+-                console.log('Connected');
++                console.log('SimpleChat.Support: Chat box connected!');
+                 // create main chat box and append at the end of the 'body' tag
+                 sChatBoxCreate();
+                 // subscribe to the 'chat' publication
+                 ddp.sub('Chat.messagesList', [clientAppId, userSessionId]);
++                ddp.sub('Meteor.users.adminStatus', [clientAppId]);
+                 ddp.on('added', function (data) {
+-                    sChatBox().container.appendChild(sChatBoxMessage(data.fields));
+-                    var messages = document.querySelector('.s-chat-messages');
+-                    messages.scrollTop = messages.scrollHeight;
++                    if (data.collection === 'chat') {
++                        sChatBox().container.appendChild(sChatBoxMessage(data.fields));
++                        var messages = document.querySelector('.s-chat-messages');
++                        messages.scrollTop = messages.scrollHeight;
++                    }
++                    if (data.collection === 'users') {
++                        adminActive(data);
++                    }
+                 });
++
++                ddp.on('changed', function (data) {
++                    if (data.collection === 'users') {
++                        adminActive(data);
++                    }
++                });
++
+                 sChatBox().submitInput.addEventListener('keydown', submitMsg, false);
+                 sChatBox().boxHeader.addEventListener('click', closeBox, false);
+                 sChatBox().boxOpener.addEventListener('click', openBox, false);

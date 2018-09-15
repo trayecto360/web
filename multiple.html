@@ -1,0 +1,55 @@
+<html>
+<head>
+
+    <title>Google Maps Multiple Markers</title>
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6ccVpzldUy7Jn-g4arKbNr1zUcSnLd_Y"></script>
+    <style> #map{cursor: pointer;}</style>
+</head>
+<body>
+<div id="map" style="height: 100%; width: 100%; ">
+</div>
+<script type="text/javascript">
+    var labels = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var labelIndex = 0;
+    var locations = [
+        ['1',28.646379672186548, -106.11609242856503,1],
+        ['2',28.646411449747333, -106.11609376966953,2],
+        ['3',28.646435577148182, -106.11609511077404,3],
+        ['4',28.64644852355612, -106.11608237028122,4],
+        ['5',28.646472650948446, -106.11608371138573,5],
+        ['6',28.646467943165018, -106.11611187458038,6],
+        ['7',28.646498543753527, -106.11612796783447,7],
+        ['8',28.646509136262864, -106.11609846353531,8],
+        ['9',28.64651207862639, -106.11612059175968,9],
+
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 20,
+        center: new google.maps.LatLng(28.716, -106.133666667),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            label: labels[labelIndex++ % labels.length],
+            map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+
+</script>
+</body>
+</html>

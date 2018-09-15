@@ -1,0 +1,736 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SimpleChat.Support code changes in v1.1.0</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-color: #fafafa;
+                font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+            }
+            .pretty-diff-export-title,
+            .pretty-diff-export-footer {
+                height: 60px;
+                line-height: 60px;
+                background-color: #36393B;
+                color: #ffffff;
+                font-size: 18px;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            .pretty-diff-export-footer p {
+                margin: 0;
+            }
+            .pretty-diff-export-footer a {
+                color: #ffffff;
+            }
+            .pretty-diff-export-description {
+                background-color: #fff;
+                margin: 30px 25px 0;
+                padding: 25px;
+            }
+            .pretty-diff-export-description h1,
+            .pretty-diff-export-description h2,
+            .pretty-diff-export-description h3,
+            .pretty-diff-export-description h4,
+            .pretty-diff-export-description h5,
+            .pretty-diff-export-description h6,
+            .pretty-diff-export-description p {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .pretty-diff-export-content {
+                padding: 30px 25px;
+            }
+            /*
+ *
+ * Diff to HTML (diff2html.css)
+ * Author: rtfpessoa (https://github.com/rtfpessoa/diff2html)
+ * Date: Friday 29 August 2014
+ * Last Update: Friday 30 January 2015
+ *
+ */
+
+.d2h-wrapper {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+}
+
+.d2h-file-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 1em;
+}
+
+.d2h-file-header {
+    padding: 5px 10px;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #f7f7f7;
+    font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.d2h-file-stats {
+    display: inline;
+    font-size: 12px;
+    text-align: center;
+    max-width: 15%;
+}
+
+.d2h-lines-added {
+    background-color: #ceffce;
+    border: 1px solid #b4e2b4;
+    color: #399839;
+    border-radius: 5px 0 0 5px;
+    padding: 2px;
+    width: 25px;
+}
+
+.d2h-lines-deleted {
+    background-color: #f7c8c8;
+    border: 1px solid #e9aeae;
+    color: #c33;
+    border-radius: 0 5px 5px 0;
+    padding: 2px;
+    width: 25px;
+}
+
+.d2h-file-name {
+    display: inline;
+    height: 33px;
+    line-height: 33px;
+    max-width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.d2h-diff-table {
+    border-collapse: collapse;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    width: 100%;
+}
+
+.d2h-files-diff {
+    width: 100%;
+    background-color: #fff;
+}
+
+.d2h-file-diff {
+    overflow-x: scroll;
+}
+
+.d2h-file-side-diff {
+    display: inline-block;
+    overflow-x: auto;
+    width: 50%;
+    margin-right: -4px;
+}
+
+.d2h-code-line {
+    display: block;
+    white-space: pre;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 80px;
+    /* Override HighlightJS */
+    color: inherit;
+    overflow-x: inherit;
+    background: none;
+    /* ******************** */
+}
+
+.d2h-code-side-line {
+    display: block;
+    white-space: pre;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 50px;
+    /* Override HighlightJS */
+    color: inherit;
+    overflow-x: inherit;
+    background: none;
+    /* ******************** */
+}
+
+.d2h-code-line del,
+.d2h-code-side-line del {
+    display: inline-block;
+    margin-top: -1px;
+    text-decoration: none;
+    background-color: #ffb6ba;
+    border-radius: 0.2em;
+}
+
+.d2h-code-line ins,
+.d2h-code-side-line ins {
+    display: inline-block;
+    margin-top: -1px;
+    text-decoration: none;
+    background-color: #97f295;
+    border-radius: 0.2em;
+}
+
+.line-num1 {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line-num2 {
+    display: inline-block;
+    float: right;
+    width: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.d2h-code-linenumber {
+    position: absolute;
+    width: 2%;
+    min-width: 65px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.3);
+    text-align: right;
+    border: solid #eeeeee;
+    border-width: 0 1px 0 1px;
+    cursor: pointer;
+}
+
+.d2h-code-side-linenumber {
+    position: absolute;
+    width: auto;
+    min-width: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: solid #eeeeee;
+    border-width: 0 1px 0 1px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.d2h-del {
+    background-color: #fee8e9;
+    border-color: #e9aeae;
+}
+
+.d2h-ins {
+    background-color: #dfd;
+    border-color: #b4e2b4;
+}
+
+.d2h-info {
+    background-color: #f8fafd;
+    color: rgba(0, 0, 0, 0.3);
+    border-color: #d5e4f2;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="pretty-diff-container">
+            
+                <div class="pretty-diff-export-title">
+                    SimpleChat.Support code changes in v1.1.0
+                </div>
+            
+            
+                <div class="pretty-diff-export-description">
+                    <h4 id="codechangesinclientstaticfilesv110smallschatsupportjssmall">Code changes in client static files (v1.1.0) <small>(s-chat-support.js)</small></h4>
+
+<ul>
+<li>added online indicator (green/red dot next to the title of the chat box)</li>
+</ul>
+                </div>
+            
+            <div class="pretty-diff-side-by-side pretty-diff-export-content">
+                <div class="d2h-wrapper">
+<div class="d2h-file-wrapper" data-lang="js">
+     <div class="d2h-file-header">
+       <div class="d2h-file-stats">
+         <span class="d2h-lines-added">+28</span>
+         <span class="d2h-lines-deleted">-5</span>
+       </div>
+       <div class="d2h-file-name">old/s-chat-support.js -> new/s-chat-support.js</div>
+     </div>
+     <div class="d2h-files-diff">
+       <div class="d2h-file-side-diff">
+         <div class="d2h-code-wrapper">
+           <table class="d2h-diff-table">
+             <tbody class="d2h-diff-tbody">
+           <tr>
+  <td class="d2h-code-side-linenumber d2h-info"></td>
+  <td class="d2h-info">    <div class="d2h-code-side-line d2h-info">@@ -68,7 +68,7 @@</div>  </td>
+</tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">68</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 poweredBy.innerHTML = 'Powered by &lt;a href="https://www.simplechat.support"&gt;www.SimpleChat.Support&lt;/a&gt;';</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">69</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 submitInput.rows = '1';</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">70</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 submitInput.placeholder = (sChatSettings.labels &amp;&amp; sChatSettings.labels.sendPlaceholder) || 'Send message...';</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-del">71</td>
+    <td class="d2h-del">      <div class="d2h-code-side-line d2h-del">-                  boxHeader.innerHTML  =  '&lt;div <del>class="s-chat-header-title"&gt;' </del> +  ((sChatSettings.labels  &amp;&amp;  sChatSettings.labels.headerTitle)  ||  'Simple  Chat  Support')  +  '&lt;/div&gt;';
+</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">72</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 box.appendChild(boxHeader);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">73</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 box.appendChild(messagesList);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">74</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 box.appendChild(poweredBy);</div>    </td>
+  </tr>
+<tr>
+  <td class="d2h-code-side-linenumber d2h-info"></td>
+  <td class="d2h-info">    <div class="d2h-code-side-line d2h-info">@@ -180,18 +180,41 @@</div>  </td>
+</tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">180</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 }</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">181</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">             };</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">182</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"> </div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">183</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">             // ddp is connected callback</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">184</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">             ddp.on('connected', function () {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-del">185</td>
+    <td class="d2h-del">      <div class="d2h-code-side-line d2h-del">-                 <del>console.log('Connected');
+</del></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">186</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 // create main chat box and append at the end of the 'body' tag</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">187</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBoxCreate();</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">188</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 // subscribe to the 'chat' publication</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">189</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 ddp.sub('Chat.messagesList', [clientAppId, userSessionId]);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">190</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 ddp.on('added', function (data) {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-del">191</td>
+    <td class="d2h-del">      <div class="d2h-code-side-line d2h-del">-                    sChatBox().container.appendChild(sChatBoxMessage(data.fields));</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-del">192</td>
+    <td class="d2h-del">      <div class="d2h-code-side-line d2h-del">-                    var messages = document.querySelector('.s-chat-messages');</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-del">193</td>
+    <td class="d2h-del">      <div class="d2h-code-side-line d2h-del">-                    messages.scrollTop = messages.scrollHeight;</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">194</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 });</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">195</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBox().submitInput.addEventListener('keydown', submitMsg, false);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">196</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBox().boxHeader.addEventListener('click', closeBox, false);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">197</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBox().boxOpener.addEventListener('click', openBox, false);</div>    </td>
+  </tr>
+             </tbody>
+           </table>
+         </div>
+       </div>
+       <div class="d2h-file-side-diff">
+         <div class="d2h-code-wrapper">
+           <table class="d2h-diff-table">
+             <tbody class="d2h-diff-tbody">
+           <tr>
+  <td class="d2h-code-side-linenumber d2h-info"></td>
+  <td class="d2h-info">    <div class="d2h-code-side-line d2h-info"></div>  </td>
+</tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">68</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 poweredBy.innerHTML = 'Powered by &lt;a href="https://www.simplechat.support"&gt;www.SimpleChat.Support&lt;/a&gt;';</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">69</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 submitInput.rows = '1';</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">70</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 submitInput.placeholder = (sChatSettings.labels &amp;&amp; sChatSettings.labels.sendPlaceholder) || 'Send message...';</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">71</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                  boxHeader.innerHTML  =  '&lt;div <ins>class="s-chat-header-title"&gt;&lt;span </ins><ins>class="s-chat-presence-indicator"&gt;&lt;/span&gt; </ins><ins>' </ins> +  ((sChatSettings.labels  &amp;&amp;  sChatSettings.labels.headerTitle)  ||  'Simple  Chat  Support')  +  '&lt;/div&gt;';
+</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">72</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 box.appendChild(boxHeader);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">73</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 box.appendChild(messagesList);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">74</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 box.appendChild(poweredBy);</div>    </td>
+  </tr>
+<tr>
+  <td class="d2h-code-side-linenumber d2h-info"></td>
+  <td class="d2h-info">    <div class="d2h-code-side-line d2h-info"></div>  </td>
+</tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">180</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 }</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">181</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">             };</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">182</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"> </div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">183</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+            var adminActive = function (data) {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">184</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                if (data.fields.status.online) {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">185</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    document.getElementById('s-chat-box').classList.remove('s-chat-box-admin-is-offline');</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">186</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    document.getElementById('s-chat-box').classList.add('s-chat-box-admin-is-online');</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">187</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                } else {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">188</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    document.getElementById('s-chat-box').classList.remove('s-chat-box-admin-is-online');</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">189</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    document.getElementById('s-chat-box').classList.add('s-chat-box-admin-is-offline');</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">190</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                }</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">191</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+            };</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">192</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">193</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">             // ddp is connected callback</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">194</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">             ddp.on('connected', function () {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">195</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                 <ins>console.log('SimpleChat.Support: </ins><ins>Chat </ins><ins>box </ins><ins>connected!');
+</ins></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">196</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 // create main chat box and append at the end of the 'body' tag</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">197</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBoxCreate();</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">198</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 // subscribe to the 'chat' publication</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">199</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 ddp.sub('Chat.messagesList', [clientAppId, userSessionId]);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">200</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                ddp.sub('Meteor.users.adminStatus', [clientAppId]);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">201</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 ddp.on('added', function (data) {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx"></td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx"></div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">202</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    if (data.collection === 'chat') {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">203</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                        sChatBox().container.appendChild(sChatBoxMessage(data.fields));</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">204</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                        var messages = document.querySelector('.s-chat-messages');</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">205</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                        messages.scrollTop = messages.scrollHeight;</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">206</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    }</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">207</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    if (data.collection === 'users') {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">208</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                        adminActive(data);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">209</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    }</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">210</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 });</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">211</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">212</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                ddp.on('changed', function (data) {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">213</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    if (data.collection === 'users') {</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">214</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                        adminActive(data);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">215</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                    }</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">216</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+                });</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-ins">217</td>
+    <td class="d2h-ins">      <div class="d2h-code-side-line d2h-ins">+</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">218</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBox().submitInput.addEventListener('keydown', submitMsg, false);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">219</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBox().boxHeader.addEventListener('click', closeBox, false);</div>    </td>
+  </tr>
+<tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">220</td>
+    <td class="d2h-cntx">      <div class="d2h-code-side-line d2h-cntx">                 sChatBox().boxOpener.addEventListener('click', openBox, false);</div>    </td>
+  </tr>
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
+
+            </div>
+            
+                <div class="pretty-diff-export-footer">
+                    <small><p>Generated with <a href="http://pd.julian.io">Pretty Diff App</a></p></small>
+                </div>
+            
+        </div>
+    </body>
+</html>
+

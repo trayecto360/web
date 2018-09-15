@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<!-- 201.174.72.60 -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Trayecto360 - Google Street View</title>
+
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png"> -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6ccVpzldUy7Jn-g4arKbNr1zUcSnLd_Y"></script>
+
+
+</head>
+
+<body id="page-top" class="index">
+
+<div id="map" style="width:100%; height:600px; border-bottom:1px dotted lightgray;">
+</div>
+<img alt="" style="position: absolute; top: 36px; right: 10px;"
+     class="map-iphone hi-dpi" height="627" src="img/indoormaps-map-phone.png" width="366">
+<script type="text/javascript">
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 19,
+        center: new google.maps.LatLng(40.750450, -73.992549),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
+        scrollwheel: false,
+    });
+    /* map.setOptions({ draggableCursor: 'crosshair' }); */
+
+</script>
+<div class="hero-attribution" style="
+            background: rgba(0,0,0,.7);
+            top: 568px;
+            color: #fff;
+            left: 1px;
+            padding: 5px 10px;
+            position: absolute;
+            white-space: nowrap;
+            font-size: smaller;
+        ">Madison Square Garden | <a href="https://goo.gl/iMtfTj" target="_blank">Ver en Google Maps</a>
+</div>
+
+<!-- Navigation -->
+<nav id="nav-id" class="navbar navbar-default navbar-fixed-top" style="background-color: rgba(0, 0, 0, 0.5);">
+
+    <div class="container">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#page-top">Trayecto 360</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!--
+            <div class="header-top">
+                <span style="padding-right: 15px;">(614) 276.2545</span>
+                <span style="padding-right: 15px;">facebook.com/trayecto360</span>
+                <span>info@trayecto360.com</span>
+			</div>
+			-->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="index0.html#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index0.html#page-top">Recorrido Virtual</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index0.html#contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<header class="map intro-header" style="position: absolute;">
+
+</header>
+
+<section class="info" id="GSV">
+    <div class="container">
+
+        <div class="row col-lg-offset-2">
+            <div class="col-lg-8 text-center">
+                <img class="img-responsive img-centered" src="img/google-maps-indoor.png" alt="">
+                <h3 class="service-heading">Incorpora mapas del interior de tu empresa a <a href="http://www.google.com/maps"  target="_blank">Google Maps</a></h3>
+                <img class="img-responsive img-centered" src="img/logos/icono-uno.png" alt="">
+            </div>
+        </div>
+
+        <div class="row " style="padding-top: 30px">
+            <div class="col-lg-4 ">
+                <div class="timeline-image">
+                    <img class="img-responsive" src="img/indoormaps-map-phone.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 text-justify">
+                <ul class="ul-imagen" style="">
+
+                    <li>
+                        <p>A partir del plano de su empresa creamos un mapa del interior de su empresa y lo subimos a Google Maps.</p>
+                    </li>
+                    <li>
+                        <p>Poniendo al alcanze de cualquiera el interior de su empresa usando las tecnologías de Google Maps.</p>
+                    </li>
+                    <li>
+                        <p>Con los Mapas de interiores de Google, los visitantes pasarán menos tiempo buscando en los directorios de plantas y lo aprovecharán descubriendo puntos de interés nuevos.</p>
+                    </li>
+                    <li>
+                        <p> Basta con utilizar el zoom para entrar y salir de un edificio e ir planta por planta con los mapas de interiores.</p>
+                    </li>
+                    <ul>
+                    <li>
+                        <p><strong>Haz zoom para desplazarte</strong>
+                            Amplía la imagen para ver el plano de planta de un edificio. También puedes realizar búsquedas dentro del edificio una vez que el zoom esté al máximo.</p>
+                    </li>
+                    <li>
+                        <p><strong>Toca para cambiar de planta</strong>
+                            Utiliza el cambio de nivel de la esquina inferior derecha para moverte de una planta del edificio a otra.</p>
+                    </li>
+                    <li>
+                        <p><strong>Precisión de la ubicación mejorada</strong>
+                            Un directorio digital en la palma de tu mano.</p>
+                    </li>
+                    <li>
+                        <p><strong>Iconos universales</strong>
+                            Los puntos de interés del interior se representan con símbolos fáciles de reconocer.</p>
+                    </li>
+                    </ul>
+                </ul>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                           Somos Opensource<i class="fa fa-star" style="padding: 0 15px 0 15px;"></i>
+                           Trayecto360<i class="fa fa-star" style="padding: 0 15px 0 15px;"></i>
+                           2016<i class="fa fa-star" style="padding: 0 15px 0 15px;"></i>
+                           Chihuahua
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+<!-- Portfolio Modals -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container-out">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="modal-body">
+                        <img src="img/pantalla-a2.png" class="img-responsive img-centered" alt="">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6ccVpzldUy7Jn-g4arKbNr1zUcSnLd_Y"></script> -->
+
+<!-- Custom Theme JavaScript -->
+<script src="js/freelancer.js"></script>
+
+
+<!-- php_mailer -->
+<script>
+    var msgid = 1;
+
+    function GoSend() {
+
+        var TOcell = row.insertCell(2);
+        TOcell.innerHTML = document.mailform.toemail.value;
+
+        var FROMcell = row.insertCell(3);
+        FROMcell.innerHTML = document.mailform.from.value;
+
+        var SUBJECTcell = row.insertCell(4);
+        SUBJECTcell.innerHTML = document.mailform.subject.value;
+
+        var MESSAGEcell = row.insertCell(5);
+        MESSAGEcell.innerHTML = document.mailform.message.value;
+
+        var RESULTcell = row.insertCell(8);
+        RESULTcell.innerHTML = "<img height=\"24\" src=\"data:image/gif;base64,R0lGODlhEAAQAPYAAP///wAAANTU1JSUlGBgYEBAQERERG5ubqKiotzc3KSkpCQkJCgoKDAwMDY2Nj4+Pmpqarq6uhwcHHJycuzs7O7u7sLCwoqKilBQUF5eXr6+vtDQ0Do6OhYWFoyMjKqqqlxcXHx8fOLi4oaGhg4ODmhoaJycnGZmZra2tkZGRgoKCrCwsJaWlhgYGAYGBujo6PT09Hh4eISEhPb29oKCgqioqPr6+vz8/MDAwMrKyvj4+NbW1q6urvDw8NLS0uTk5N7e3s7OzsbGxry8vODg4NjY2PLy8tra2np6erS0tLKyskxMTFJSUlpaWmJiYkJCQjw8PMTExHZ2djIyMurq6ioqKo6OjlhYWCwsLB4eHqCgoE5OThISEoiIiGRkZDQ0NMjIyMzMzObm5ri4uH5+fpKSkp6enlZWVpCQkEpKSkhISCIiIqamphAQEAwMDKysrAQEBJqamiYmJhQUFDg4OHR0dC4uLggICHBwcCAgIFRUVGxsbICAgAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAHjYAAgoOEhYUbIykthoUIHCQqLoI2OjeFCgsdJSsvgjcwPTaDAgYSHoY2FBSWAAMLE4wAPT89ggQMEbEzQD+CBQ0UsQA7RYIGDhWxN0E+ggcPFrEUQjuCCAYXsT5DRIIJEBgfhjsrFkaDERkgJhswMwk4CDzdhBohJwcxNB4sPAmMIlCwkOGhRo5gwhIGAgAh+QQJCgAAACwAAAAAEAAQAAAHjIAAgoOEhYU7A1dYDFtdG4YAPBhVC1ktXCRfJoVKT1NIERRUSl4qXIRHBFCbhTKFCgYjkII3g0hLUbMAOjaCBEw9ukZGgidNxLMUFYIXTkGzOmLLAEkQCLNUQMEAPxdSGoYvAkS9gjkyNEkJOjovRWAb04NBJlYsWh9KQ2FUkFQ5SWqsEJIAhq6DAAIBACH5BAkKAAAALAAAAAAQABAAAAeJgACCg4SFhQkKE2kGXiwChgBDB0sGDw4NDGpshTheZ2hRFRVDUmsMCIMiZE48hmgtUBuCYxBmkAAQbV2CLBM+t0puaoIySDC3VC4tgh40M7eFNRdH0IRgZUO3NjqDFB9mv4U6Pc+DRzUfQVQ3NzAULxU2hUBDKENCQTtAL9yGRgkbcvggEq9atUAAIfkECQoAAAAsAAAAABAAEAAAB4+AAIKDhIWFPygeEE4hbEeGADkXBycZZ1tqTkqFQSNIbBtGPUJdD088g1QmMjiGZl9MO4I5ViiQAEgMA4JKLAm3EWtXgmxmOrcUElWCb2zHkFQdcoIWPGK3Sm1LgkcoPrdOKiOCRmA4IpBwDUGDL2A5IjCCN/QAcYUURQIJIlQ9MzZu6aAgRgwFGAFvKRwUCAAh+QQJCgAAACwAAAAAEAAQAAAHjIAAgoOEhYUUYW9lHiYRP4YACStxZRc0SBMyFoVEPAoWQDMzAgolEBqDRjg8O4ZKIBNAgkBjG5AAZVtsgj44VLdCanWCYUI3txUPS7xBx5AVDgazAjC3Q3ZeghUJv5B1cgOCNmI/1YUeWSkCgzNUFDODKydzCwqFNkYwOoIubnQIt244MzDC1q2DggIBACH5BAkKAAAALAAAAAAQABAAAAeJgACCg4SFhTBAOSgrEUEUhgBUQThjSh8IcQo+hRUbYEdUNjoiGlZWQYM2QD4vhkI0ZWKCPQmtkG9SEYJURDOQAD4HaLuyv0ZeB4IVj8ZNJ4IwRje/QkxkgjYz05BdamyDN9uFJg9OR4YEK1RUYzFTT0qGdnduXC1Zchg8kEEjaQsMzpTZ8avgoEAAIfkECQoAAAAsAAAAABAAEAAAB4iAAIKDhIWFNz0/Oz47IjCGADpURAkCQUI4USKFNhUvFTMANxU7KElAhDA9OoZHH0oVgjczrJBRZkGyNpCCRCw8vIUzHmXBhDM0HoIGLsCQAjEmgjIqXrxaBxGCGw5cF4Y8TnybglprLXhjFBUWVnpeOIUIT3lydg4PantDz2UZDwYOIEhgzFggACH5BAkKAAAALAAAAAAQABAAAAeLgACCg4SFhjc6RhUVRjaGgzYzRhRiREQ9hSaGOhRFOxSDQQ0uj1RBPjOCIypOjwAJFkSCSyQrrhRDOYILXFSuNkpjggwtvo86H7YAZ1korkRaEYJlC3WuESxBggJLWHGGFhcIxgBvUHQyUT1GQWwhFxuFKyBPakxNXgceYY9HCDEZTlxA8cOVwUGBAAA7AAAAAAAAAAAA\">";
+
+        var postdata = "sendemail=1&toemail=" + document.mailform.toemail.value;
+        postdata += "&from=" + document.mailform.from.value;
+        postdata += "&subject=" + document.mailform.subject.value;
+        postdata += "&sendmethod=" + document.mailform.sendmethod.value;
+        postdata += "&message=" + encodeURIComponent(document.mailform.message.value).replace("%20", "+");
+        var url = "<?=$_SERVER['PHP_SELF']; ?>";
+        var request = new XMLHttpRequest();
+        request.open("POST", url, true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.overrideMimeType("text/plain");
+        request.onreadystatechange = function () {
+            if (request.readyState == 4) {
+                NODEcell.innerHTML = request.getResponseHeader("X-Node");
+                if (request.responseText == "OK" || request.responseText == "FAIL") {
+                    RESULTcell.innerHTML = request.responseText;
+                } else {
+                    if (request.status == 0) {
+                        RESULTcell.innerHTML = "ERR_EMPTY_RESPONSE";
+                    } else {
+                        RESULTcell.innerHTML = "HTTP/1.1 " + request.status + " " + request.statusText + "<br /><br />" + request.responseText;
+                    }
+                }
+            }
+        }
+        request.send(postdata);
+    }
+</script>
+
+</body>
+
+</html>

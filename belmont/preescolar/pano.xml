@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour apprev="15983" start="node5" appversion="5.2.2">
+  <panorama id="node5" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3108" levelingroll="0" levelbiashidpi="0.400" width="3108" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3108" width="3108" preload="0"/>
+      <level predecode="0" height="1554" width="1554" preload="0"/>
+      <level predecode="0" height="777" width="777" preload="0"/>
+      <level predecode="1" height="388" width="388" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="-56" fovmode="0">
+      <start tilt="1.68659" fov="70" projection="4" pan="118.398"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.703046705241825" author="" copyright="" description="" comment="" source="" customnodeid="" title="Fachada" tags="panos|PB" longitude="-106.15409572883607" datetime="5/24/2018 6:05 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="0" description="" skinid="ht_node" title="Patio" target="$fwd" url="{node9}" pan="-196.366"/>
+      <hotspot id="Point02" tilt="29.1" description="Fundado en... &#xa;Hubicado al norte de la Ciudad&#xa;Etc.&#xa;&lt;a href='http://mx.unoi.com/' target='_blank'>&lt;img src='images/uno.png'/>&lt;/a>" skinid="ht_info" title="Belmont" target="" url="" pan="132.71"/>
+      <hotspot id="Point03" tilt="2.73" description="Celebrando decimo aniver..." skinid="ht_image" title="10 years" target="" url="images/belmont_10_years.png" pan="73.73"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node9" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3122" levelingroll="0" levelbiashidpi="0.400" width="3122" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3122" width="3122" preload="0"/>
+      <level predecode="0" height="1561" width="1561" preload="0"/>
+      <level predecode="0" height="780" width="780" preload="0"/>
+      <level predecode="1" height="390" width="390" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="-139" fovmode="0">
+      <start tilt="1.60558" fov="71.3303" projection="4" pan="45.2384"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.70299268729232" author="" copyright="" description="" comment="" source="" customnodeid="" title="Patio" tags="panos|PB" longitude="-106.15404471932186" datetime="5/24/2018 5:58 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-2.54" description="" skinid="ht_node" title="Fachada" target="$fwd" url="{node5}" pan="-139.96"/>
+      <hotspot id="Point02" tilt="-2.73" description="" skinid="ht_node" title="Lobby" target="-12.6/1.7/71.3" url="{node14}" pan="38.69"/>
+      <hotspot id="Point03" tilt="-7.43" description="Contamos con espacios abiertos..." skinid="ht_info" title="Especio" target="" url="" pan="110.8"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node14" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3111" levelingroll="0" levelbiashidpi="0.400" width="3111" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3111" width="3111" preload="0"/>
+      <level predecode="0" height="1555" width="1555" preload="0"/>
+      <level predecode="0" height="777" width="777" preload="0"/>
+      <level predecode="1" height="388" width="388" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="139" fovmode="0">
+      <start tilt="-0.868546" fov="71.3303" projection="4" pan="1.61359"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702953363471416" author="" copyright="" description="" comment="" source="" customnodeid="" title="Lobby" tags="panos|PB" longitude="-106.154060510416" datetime="5/24/2018 5:50 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-6.51" description="" skinid="ht_node" title="Patio" target="32.8/-2.7/71.3" url="{node9}" pan="147.11"/>
+      <hotspot id="Point02" tilt="11.54" description="" skinid="ht_node" title="Escaleras" target="" url="{node7}" pan="-2.36"/>
+      <hotspot id="Point03" tilt="-1.9" description="" skinid="ht_node" title="Motricidad" target="$fwd" url="{node11}" pan="37.37"/>
+      <hotspot id="Point04" tilt="27.44" description="" skinid="ht_url" title="" target="_blank" url="" pan="-72.3"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node7" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3110" levelingroll="0" levelbiashidpi="0.400" width="3110" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3110" width="3110" preload="0"/>
+      <level predecode="0" height="1555" width="1555" preload="0"/>
+      <level predecode="0" height="777" width="777" preload="0"/>
+      <level predecode="1" height="388" width="388" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="133" fovmode="0">
+      <start tilt="-10.7103" fov="70" projection="4" pan="161.598"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702901294751868" author="" copyright="" description="" comment="" source="" customnodeid="" title="Escaleras" tags="panos|PB" longitude="-106.15405063558194" datetime="5/24/2018 5:25 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-25.4" description="" skinid="ht_node" title="Lobby" target="$fwd" url="{node14}" pan="151.52"/>
+      <hotspot id="Point02" tilt="12.51" description="" skinid="ht_node" title="Pasillo" target="$fwd" url="{node12}" pan="183.97"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node12" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3116" levelingroll="0" levelbiashidpi="0.400" width="3116" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3116" width="3116" preload="0"/>
+      <level predecode="0" height="1558" width="1558" preload="0"/>
+      <level predecode="0" height="779" width="779" preload="0"/>
+      <level predecode="1" height="389" width="389" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="78" fovmode="0">
+      <start tilt="-2.26194" fov="71.3303" projection="4" pan="139.971"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.70290264737592" author="" copyright="" description="" comment="" source="" customnodeid="" title="Pasillo" tags="panos|PA" longitude="-106.15408972023772" datetime="5/24/2018 5:20 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-17.78" description="" skinid="ht_node" title="Escaleras" target="$fwd" url="{node7}" pan="-33.07"/>
+      <hotspot id="Point02" tilt="-6.05" description="" skinid="ht_node" title="Salon" target="$fwd" url="{node15}" pan="-101.26"/>
+      <hotspot id="Point03" tilt="-1.6" description="" skinid="ht_node" title="Pasillo" target="$fwd" url="{node13}" pan="165.39"/>
+      <hotspot id="Point04" tilt="-5.72" description="" skinid="ht_node" title="3A" target="$fwd" url="{node2}" pan="101.35"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node15" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3111" levelingroll="0" levelbiashidpi="0.400" width="3111" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3111" width="3111" preload="0"/>
+      <level predecode="0" height="1555" width="1555" preload="0"/>
+      <level predecode="0" height="777" width="777" preload="0"/>
+      <level predecode="1" height="388" width="388" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="-132" fovmode="0">
+      <start tilt="1.16538" fov="71.3303" projection="4" pan="-115.05"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702884699874925" author="" copyright="" description="" comment="" source="" customnodeid="" title="Salon" tags="panos|PA" longitude="-106.154081317791" datetime="5/24/2018 4:35 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-3.38" description="" skinid="ht_node" title="Pasillo" target="$fwd" url="{node12}" pan="-106.55"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node2" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3121" levelingroll="0" levelbiashidpi="0.400" width="3121" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3121" width="3121" preload="0"/>
+      <level predecode="0" height="1560" width="1560" preload="0"/>
+      <level predecode="0" height="780" width="780" preload="0"/>
+      <level predecode="1" height="390" width="390" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="18" fovmode="0">
+      <start tilt="-1.04451" fov="70" projection="4" pan="153.959"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702921881559323" author="" copyright="" description="" comment="" source="" customnodeid="" title="3A" tags="panos|PA" longitude="-106.15408575214957" datetime="5/24/2018 4:47 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-3.94" description="" skinid="ht_node" title="Pasillo" target="$fwd" url="{node12}" pan="539.35"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node6" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3111" levelingroll="0" levelbiashidpi="0.400" width="3111" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3111" width="3111" preload="0"/>
+      <level predecode="0" height="1555" width="1555" preload="0"/>
+      <level predecode="0" height="777" width="777" preload="0"/>
+      <level predecode="1" height="388" width="388" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="168" fovmode="0">
+      <start tilt="-0.836907" fov="70" projection="4" pan="-23.4665"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.70293322933183" author="" copyright="" description="" comment="" source="" customnodeid="" title="Salon" tags="panos|PA" longitude="-106.15413890623500" datetime="5/24/2018 5:04 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-4.81" description="" skinid="ht_node" title="Pasillo" target="$fwd" url="{node13}" pan="360.32"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node13" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3112" levelingroll="0" levelbiashidpi="0.400" width="3112" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3112" width="3112" preload="0"/>
+      <level predecode="0" height="1556" width="1556" preload="0"/>
+      <level predecode="0" height="778" width="778" preload="0"/>
+      <level predecode="1" height="389" width="389" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="51" fovmode="0">
+      <start tilt="-6.76586" fov="71.3303" projection="4" pan="-33.8508"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702923526238855" author="" copyright="" description="" comment="" source="" customnodeid="" title="Pasillo" tags="panos|PA" longitude="-106.1541857116394" datetime="5/24/2018 5:10 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point02" tilt="-1.71" description="" skinid="ht_node" title="Pasillo" target="$fwd" url="{node12}" pan="-68.89"/>
+      <hotspot id="Point03" tilt="-3.49" description="" skinid="ht_node" title="Salon" target="$fwd" url="{node6}" pan="7.42"/>
+      <hotspot id="Point01" tilt="-3.29" description="" skinid="ht_node" title="Salon" target="$fwd" url="{node8}" pan="77.34"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node8" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3116" levelingroll="0" levelbiashidpi="0.400" width="3116" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3116" width="3116" preload="0"/>
+      <level predecode="0" height="1558" width="1558" preload="0"/>
+      <level predecode="0" height="779" width="779" preload="0"/>
+      <level predecode="1" height="389" width="389" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="143" fovmode="0">
+      <start tilt="-1.69449" fov="71.3303" projection="4" pan="-60.6387"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702957052467916" author="" copyright="" description="" comment="" source="" customnodeid="" title="Salon" tags="panos|PA" longitude="-106.15422002083204" datetime="5/24/2018 5:07 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-1.6" description="" skinid="ht_node" title="Pasillo" target="$fwd" url="{node13}" pan="-5.66"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node11" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3106" levelingroll="0" levelbiashidpi="0.400" width="3106" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3106" width="3106" preload="0"/>
+      <level predecode="0" height="1553" width="1553" preload="0"/>
+      <level predecode="0" height="776" width="776" preload="0"/>
+      <level predecode="1" height="388" width="388" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="-43" fovmode="0">
+      <start tilt="-9.04666" fov="70" projection="4" pan="-42.3419"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702935351948245" author="" copyright="" description="" comment="" source="" customnodeid="" title="Motricidad" tags="panos|PA" longitude="-106.1539968104334" datetime="5/24/2018 5:38 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point01" tilt="-0.41" description="" skinid="ht_node" title="Maternal" target="$fwd" url="{node10}" pan="-126.65"/>
+      <hotspot id="Point02" tilt="1.21" description="" skinid="ht_node" title="Lobby" target="$fwd" url="{node14}" pan="24.03"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+  <panorama id="node10" hideabout="1">
+    <input levelingpitch="0" leveltilesize="510" height="3115" levelingroll="0" levelbiashidpi="0.400" width="3115" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400">
+      <level predecode="0" height="3115" width="3115" preload="0"/>
+      <level predecode="0" height="1557" width="1557" preload="0"/>
+      <level predecode="0" height="778" width="778" preload="0"/>
+      <level predecode="1" height="389" width="389" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="-10" fovmode="0">
+      <start tilt="-10.478" fov="70" projection="4" pan="-28.1716"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" fov="5" pan="0"/>
+      <max fovfisheye="360" tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360"/>
+    </view>
+    <userdata latitude="28.702928353973878" author="" copyright="" description="" comment="" source="" customnodeid="" title="Maternal" tags="panos|PA" longitude="-106.15398189508915" datetime="5/24/2018 5:35 AM" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" bordercolor="0xaa0000" enabled="1" background="1" width="180" backgroundalpha="1" borderalpha="1" borderradius="1" textcolor="0x000000" wordwrap="1" backgroundcolor="0xffffff" textalpha="1" border="1"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" backgroundcolor="0x0000ff" handcursor="1"/>
+      <hotspot id="Point02" tilt="-1.44" description="" skinid="ht_node" title="Motricidad" target="$fwd" url="{node11}" pan="12.44"/>
+      <hotspot id="Point01" tilt="-4.55" description="La motricidad infantil desde ya... &lt;h1>Hello&lt;/h1>" skinid="ht_info" title="InfoMotri" target="" url="" pan="131.19"/>
+    </hotspots>
+    <media/>
+    <transition zoomspeed="2" zoomoutpause="1" enabled="0" zoomin="0" zoomout="0" type="crossdissolve" blendtime="1" blendcolor="0x000000" zoomfov="20" softedge="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedkeyboard="0" contextfullscreen="0" speedwheel="1" invertcontrol="1" lockedwheel="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" hideabout="1" simulatemass="1" sensitivity="8" rubberband="0" lockedmouse="0" contextprojections="0"/>
+  </panorama>
+</tour>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poner marcas</title>
+
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6ccVpzldUy7Jn-g4arKbNr1zUcSnLd_Y"></script>
+    <style>
+        .labels {
+            color: white;
+            background-color: red;
+            font-family: "Lucida Grande", "Arial", sans-serif;
+            font-size: 10px;
+            text-align: center;
+            width: 30px;
+            white-space: nowrap;
+        }
+    </style>
+
+</head>
+    <body>
+        <div id="map" style="position: absolute; left: 326px; top:2px; bottom: 3px; right: 3px; border:1px dotted red;
+        font-size: smaller;">
+        </div>
+        <textarea rows="30" cols="44" id="txtCopy"
+                  style="position: absolute; left: 3px; top:3px;">
+        </textarea>
+
+        <script type="text/javascript">
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 20,
+                center: new google.maps.LatLng(28.716, -106.133666667),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+            });
+            map.setOptions({ draggableCursor: 'crosshair' });
+
+            var labels = ['1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F','G','H','I','J','K','L','M'];
+            var labelIndex = 0;
+            document.getElementById("txtCopy").value = '';
+            google.maps.event.addListener(map, 'click', function(event) {
+                placeMarker(event.latLng);
+            });
+            var pinIcon = new google.maps.MarkerImage(
+                    "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|FFFFFF",
+                    null, /* size is determined at runtime */
+                    null, /* origin is 0,0 */
+                    null, /* anchor is bottom center of the scaled image */
+                    new google.maps.Size(24, 24)
+            );
+            function placeMarker(location) {
+                var lbl =  labels[labelIndex++ % labels.length];
+                var ltdLong = "['" + lbl + "'," + location + "," + labelIndex  + "],";
+                ltdLong = ltdLong.replace("(","");
+                ltdLong = ltdLong.replace(")","");
+                var marker = new google.maps.Marker({
+                    position: location,
+                    label: lbl,
+                    title: ltdLong,
+                    map: map,
+                    icon: "/site/img/icons/gsvMark.png",
+                    labelClass: "labels"
+                });
+                //map.panTo(position);
+                //txt.Text = ltdLong;
+                document.getElementById("txtCopy").value += ltdLong + '\n';
+            }
+
+        </script>
+
+    </body>
+</html>

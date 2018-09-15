@@ -1,0 +1,50 @@
+intro-header
+    border-bottom: 1px solid red;
+    position: relative;
+
+
+MArkus
+    position: absolute;
+
+
+#18bc9c
+
+<!-- Team Section -->
+<section id="team" class="bg-light-gray ">
+    <div class="container" >
+
+            <div class="col-lg-12 text-center">
+                <h3 class="service-heading">Nosotros</h3>
+            </div>
+
+        <div class="row ">
+            <div class="col-sm-2 col-lg-offset-2">
+                <div class="team-member bwx">
+                    <img src="img/team/yo.png" class="img-responsive img-circle" alt="">
+                    <h4>Juan Calderón</h4>
+                </div>
+            </div>
+            <div class="col-sm-2 col-lg-offset-2">
+                <div class="team-member bwx">
+                    <img src="img/team/pris-1.png" class="bw img-responsive img-circle" alt="" >
+                    <h4>Priscila Prieto</h4>
+                </div>
+            </div>
+            <div class="col-sm-2 col-lg-offset-2">
+                <div class="team-member bwx">
+                    <img src="img/team/mario.jpg" class="img-responsive img-circle" alt="">
+                    <h4>Mario Salgado</h4>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+.bwx {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
