@@ -594,3 +594,8 @@ footer .footer-below {
     /* height: 270.2px; */
     width: 100%;
 }
+
+.img-logo {
+    width: 50px;
+    margin-bottom: 5px;
+}
