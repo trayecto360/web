@@ -280,6 +280,16 @@ section#contact-sub {
     color: #fff;
 }
 
+.caption-content h4 {
+    color: #03b35e;
+    margin: 0px;
+}
+
+.caption-content h5 {
+    color: #03b35e;
+    margin: 0px;
+}
+
 .card #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
     margin-top: -12px;
 }
@@ -581,5 +591,6 @@ footer .footer-below {
 }
 
 .img-prevista {
-    height: 270.2px;
+    /* height: 270.2px; */
+    width: 100%;
 }
